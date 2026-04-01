@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dqew3weeg73or"]
+
+[ext_resource type="Script" uid="uid://cim5i53t4oe6" path="res://scenes/objects.gd" id="1_5uc8s"]
+[ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="1_aefpu"]
+[ext_resource type="Texture2D" uid="uid://y3ndpd5bhsi3" path="res://graphics/objects/tree2.png" id="2_5uc8s"]
+[ext_resource type="Texture2D" uid="uid://y78osdw0bolc" path="res://graphics/objects/box1.png" id="3_r5rt6"]
+
+[node name="Node2D" type="Node2D" unique_id=333108243]
+script = ExtResource("1_5uc8s")
+
+[node name="Tree1" type="Sprite2D" parent="." unique_id=247448662]
+texture = ExtResource("1_aefpu")
+
+[node name="Tree2" type="Sprite2D" parent="." unique_id=1307802528]
+position = Vector2(10, 5)
+texture = ExtResource("2_5uc8s")
+
+[node name="Box1" type="Sprite2D" parent="." unique_id=1098697915]
+position = Vector2(-8, 20)
+texture = ExtResource("3_r5rt6")

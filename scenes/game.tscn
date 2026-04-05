@@ -31,30 +31,40 @@ texture = ExtResource("1_uwrxv")
 [node name="Borders" type="Node2D" parent="." unique_id=59957954]
 
 [node name="Left" type="StaticBody2D" parent="Borders" unique_id=149910526]
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Left" unique_id=417503867]
 position = Vector2(-192.5, 0)
 shape = SubResource("RectangleShape2D_lnu2h")
 
 [node name="Right" type="StaticBody2D" parent="Borders" unique_id=1264714237]
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Right" unique_id=1279573032]
 position = Vector2(192.5, 0)
 shape = SubResource("RectangleShape2D_lnu2h")
 
 [node name="Bottom" type="StaticBody2D" parent="Borders" unique_id=1557922148]
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Bottom" unique_id=853570453]
 position = Vector2(0, 319.75)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="Top" type="StaticBody2D" parent="Borders" unique_id=69876928]
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Top" unique_id=25065571]
 position = Vector2(0, -320)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="FinishArea" type="Area2D" parent="Borders" unique_id=2141464963]
+collision_layer = 0
+collision_mask = 2
 script = SubResource("GDScript_lbhrr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/FinishArea" unique_id=632134956]

@@ -61,7 +61,6 @@ confirm={
 2d_physics/layer_1="Terrain"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Cars"
-2d_physics/layer_4="Borders"
 
 [rendering]
 

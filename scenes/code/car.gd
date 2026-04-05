@@ -2,9 +2,15 @@ extends Area2D
 
 var direction := Vector2.LEFT
 var speed := 200
+var car_types = [
+	preload("res://graphics/cars/green.png"),
+	preload("res://graphics/cars/red.png"),
+	preload("res://graphics/cars/yellow.png")
+]
 
 
 func _ready() -> void:
+	$CarSprite.texture = car_types.pick_random()
 	if position.x < 0:
 		direction = Vector2.RIGHT
 		$CarSprite.flip_h = true

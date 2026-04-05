@@ -121,6 +121,7 @@ shape = SubResource("RectangleShape2D_iywne")
 [node name="Timer" type="Node2D" parent="." unique_id=1834990784]
 
 [node name="CarTimer" type="Timer" parent="Timer" unique_id=1319089710]
+wait_time = 0.1
 autostart = true
 
 [node name="Objects" type="Node2D" parent="." unique_id=1309389958]

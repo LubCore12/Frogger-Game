@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction := Vector2.ZERO
-var speed := 200
+var speed := 150
 var is_standing = true
 
 

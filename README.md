@@ -12,7 +12,6 @@ You control a character trying to cross a road filled with moving vehicles.
 - Reach the other side of the road 🏁
 - Do it in the **shortest time possible ⏱️**
 - Avoid getting hit by cars 🚗💥
-- 
 ---
 
 ## 🕹️ Controls

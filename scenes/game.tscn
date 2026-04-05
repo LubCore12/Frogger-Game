@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://oqgtp468wc6x" path="res://graphics/objects/sign.png" id="19_bhx41"]
 [ext_resource type="Texture2D" uid="uid://b3jchn0artiyt" path="res://graphics/objects/line.png" id="20_qnb83"]
 [ext_resource type="Texture2D" uid="uid://cfe22lwgaf1k2" path="res://graphics/objects/traffic.png" id="21_sww3w"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="23_bt5mj"]
+[ext_resource type="Script" uid="uid://ryvtqu7rkxe0" path="res://scenes/code/layer.gd" id="23_e1j6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
 size = Vector2(1, 640)
@@ -122,6 +124,9 @@ shape = SubResource("RectangleShape2D_iywne")
 
 [node name="CarTimer" type="Timer" parent="Timer" unique_id=1319089710]
 wait_time = 0.1
+autostart = true
+
+[node name="LabelTimer" type="Timer" parent="Timer" unique_id=277105712]
 autostart = true
 
 [node name="Objects" type="Node2D" parent="." unique_id=1309389958]
@@ -640,5 +645,22 @@ position = Vector2(-203, -95)
 [node name="Marker2D9" type="Marker2D" parent="CarStartPositions" unique_id=1696729724]
 position = Vector2(-203, -119)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1920817703]
+script = ExtResource("23_e1j6l")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=501588082]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("23_bt5mj")
+theme_override_font_sizes/font_size = 50
+text = "0"
+
 [connection signal="body_entered" from="Borders/FinishArea" to="." method="_on_finish_area_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
+[connection signal="timeout" from="Timer/LabelTimer" to="CanvasLayer" method="_on_label_timer_timeout"]

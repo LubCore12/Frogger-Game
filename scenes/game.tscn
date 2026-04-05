@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://b3jchn0artiyt" path="res://graphics/objects/line.png" id="20_qnb83"]
 [ext_resource type="Texture2D" uid="uid://cfe22lwgaf1k2" path="res://graphics/objects/traffic.png" id="21_sww3w"]
 [ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="23_bt5mj"]
-[ext_resource type="Script" uid="uid://ryvtqu7rkxe0" path="res://scenes/code/layer.gd" id="23_e1j6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
 size = Vector2(1, 640)
@@ -69,6 +68,11 @@ size = Vector2(2, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
 size = Vector2(6, 9)
+
+[sub_resource type="GDScript" id="GDScript_bt5mj"]
+script/source = "extends CanvasLayer
+
+"
 
 [node name="Game" type="Node2D" unique_id=1347981326]
 script = ExtResource("1_lbhrr")
@@ -646,7 +650,7 @@ position = Vector2(-203, -95)
 position = Vector2(-203, -119)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1920817703]
-script = ExtResource("23_e1j6l")
+script = SubResource("GDScript_bt5mj")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=501588082]
 anchors_preset = -1
@@ -663,4 +667,4 @@ text = "0"
 
 [connection signal="body_entered" from="Borders/FinishArea" to="." method="_on_finish_area_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
-[connection signal="timeout" from="Timer/LabelTimer" to="CanvasLayer" method="_on_label_timer_timeout"]
+[connection signal="timeout" from="Timer/LabelTimer" to="." method="_on_label_timer_timeout"]

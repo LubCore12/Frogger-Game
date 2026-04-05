@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bg46h5x2n6eev"]
 
 [ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://fonts/Crackman.otf" id="1_4ignj"]
+[ext_resource type="Script" uid="uid://bgio7l4frav73" path="res://scenes/code/title.gd" id="1_pyl7j"]
 [ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://graphics/player/player_simple.png" id="2_p6dhs"]
 [ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="3_pyl7j"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pyl7j")
 
 [node name="BG" type="ColorRect" parent="." unique_id=952404067]
 layout_mode = 1
@@ -69,3 +71,4 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_pyl7j")
 theme_override_font_sizes/font_size = 30
 text = "High Score: 123"
+horizontal_alignment = 1
